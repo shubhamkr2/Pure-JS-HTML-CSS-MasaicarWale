@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./ad.css" />
+    <title>Ad Page</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/index.html"><h1>Masai carWale</h1></a>
+      <div class="nav">
+        <a href="./Ad.html">Ad page</a>
+        <a href="../Cars Page/cars.html">Cars page</a>
+        <a href="../Whishlist Page/whishlist.html">Wishlist page</a>
+      </div>
+    </div>
+    <div class="form_container">
+      <form id="form">
+        <label>Brand of car :</label>
+        <select name="brand" id="brand">
+          <option value="">-</option>
+          <option value="Maruti">Maruti</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="Mahindra">Mahindra</option>
+          <option value="Tata">Tata</option>
+        </select>
+        <label>Type of car :</label>
+        <select name="type" id="type">
+          <option value="">-</option>
+          <option value="Manual">Manual</option>
+          <option value="Manual">Automated</option>
+        </select>
+        <label>Year of purchase :</label>
+        <select name="year" id="year">
+          <option value="">-</option>
+          <option value=2023>2023</option>
+          <option value=2022>2022</option>
+          <option value=2021>2021</option>
+          <option value=2020>2020</option>
+          <option value=2019>2019</option>
+          <option value=2018>2018</option>
+          <option value=2017>2017</option>
+          <option value=2016>2016</option>
+          <option value=2015>2015</option>
+        </select>
+        <label>KM driven :</label>
+        <input type="number" id="driven" placeholder="KM driven" />
+        <label>Description :</label>
+        <textarea id="description" placeholder="About you Car"></textarea>
+        <label>Price :</label>
+        <input type="number" id="price" placeholder="Price" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="./Ad.js"></script>
+</html>

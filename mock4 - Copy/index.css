@@ -1,0 +1,29 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: aquamarine;
+  padding: 0px 50px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}

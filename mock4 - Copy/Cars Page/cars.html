@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cars.css" />
+    <title>Car's Page</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/index.html"><h1>Masai carWale</h1></a>
+      <div class="nav">
+        <a href="../Ad Page/Ad.html">Ad page</a>
+        <a href="./cars.html">Cars page</a>
+        <a href="../Whishlist Page/whishlist.html">Wishlist page</a>
+      </div>
+    </div>
+    <h1 class="heading">Cars Page</h1>
+    <div class="sort_filter">
+      <div>
+        <label>Sort By :</label>
+        <select name="Price" id="price" onchange="sortingByPrice()">
+          <option value="">By Price</option>
+          <option value="LH">Low to High</option>
+          <option value="HL">High to Low</option>
+        </select>
+        <select name="kms" id="kms" onchange="sortingByKms()">
+          <option value="">By Kms</option>
+          <option value="10000">Upto 10000kms</option>
+          <option value="20000">Upto 20000kms</option>
+          <option value="50000">Upto 50000kms</option>
+          <option value="100000">Upto 70000kms</option>
+        </select>
+      </div>
+      <div>
+        <label>Filter By :</label>
+        <select name="filter" id="filter" onchange="filterByBrand()">
+          <option value="">Brand</option>
+          <option value="Maruti">Maruti</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="Mahindra">Mahindra</option>
+          <option value="Tata">Tata</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal">
+      <span class="modal_close_btn" onclick="onCloseModal()">&times;</span>
+      <label>New Price</label>
+      <input type="number" placeholder="Enter Price" id="new_price"/>
+      <button class="update_price">Submit</button>
+    </div>
+    <div class="cars_container"></div>
+  </body>
+  <script src="./cars.js"></script>
+</html>

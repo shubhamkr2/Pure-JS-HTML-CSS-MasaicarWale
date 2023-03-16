@@ -1,0 +1,185 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: aquamarine;
+  padding: 0px 50px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.heading {
+  text-align: center;
+  margin: 10px;
+}
+.sort_filter {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  padding: 20px 30px 0px 0px;
+}
+.sort_filter select,
+.sort_filter option {
+  padding: 10px;
+  font-weight: 600;
+}
+.cars_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.cars_container > div {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+.cars_container div img {
+  max-width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.icon {
+  position: absolute;
+  width: 20px;
+  top: 44%;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.details {
+  padding: 10px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details > h4 {
+  color: gray;
+}
+.details p {
+  color: gray;
+  font-size: 12px;
+}
+.details .span {
+  display: flex;
+  justify-content: space-between;
+}
+.span {
+  padding: 10px 0px 15px 0px;
+  border-bottom: 1px solid rgb(230, 221, 221);
+}
+.span span {
+  background-color: rgb(197, 221, 223);
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.price h3 {
+  color: rgb(255, 115, 0);
+}
+.details button {
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.details .remove {
+  background-color: red;
+}
+.details .edit {
+  background-color: green;
+}
+.modal {
+  width: 120px;
+  position: absolute;
+  z-index: 99;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: none;
+}
+.modal_open {
+  display: flex;
+  backdrop-filter: blur(5px);
+}
+.modal_open_blurr{
+  -webkit-filter: blur(3px); 
+
+}
+.modal input {
+  width: 100%;
+  padding: 5px;
+}
+.modal_close_btn {
+  font-size: 30px;
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+}
+@media (max-width: 975px) {
+  .cars_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 745px) {
+  .cars_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sort_filter {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 625px) {
+  .cars_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .sort_filter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .sort_filter > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
